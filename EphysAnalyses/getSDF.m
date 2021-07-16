@@ -1,6 +1,6 @@
 function [raster,histogram,pt,SDF]= getSDF(spike,trials,event,peritime,KernelType)
-%spikeDensityFunction, returns a perievent spikeDensityFunction.
-%Input Arguments:
+% spikeDensityFunction, returns a perievent spikeDensityFunction.
+% Input Arguments:
 % spike, spike times (in ms) relative to the start of trials for the entire
 %   recording (double matrix. ntrials x max spikes in a trial).
 %   Will also accept spike times in seconds relative to the start of the
@@ -17,7 +17,7 @@ function [raster,histogram,pt,SDF]= getSDF(spike,trials,event,peritime,KernelTyp
 %   the spikeDensityFunction will be convolved with a PSP filter (see
 %   below for specifics). If 2, a half gaussian filter will be used to convolve
 %   the spikeDensityFunction.
-%
+% 
 %   PSP filter:
 %   Spike density functions were constructed by convolving spike
 %   trains with a combination of growth and decay exponential functions that
@@ -31,8 +31,8 @@ function [raster,histogram,pt,SDF]= getSDF(spike,trials,event,peritime,KernelTyp
 %   for this approach has been described previously (Hanes and Schall 1996;
 %   Thompson et al. 1996); its motivation was to derive physiologically
 %   plausible spike density functions.
-%
-%Output Arguments:
+% 
+% Output Arguments:
 % raster, spike times on each trial relative to the event (nTrials x max
 %   spikes across trials. NaN padded)
 % histogram, histogram (spike counts in millisecond time bins) of the times
@@ -41,7 +41,7 @@ function [raster,histogram,pt,SDF]= getSDF(spike,trials,event,peritime,KernelTyp
 %   spikeDensityFunction (in ms).
 % SDF,  smooth and continuous function of spike rate as a function of time
 %   relative to the event.
-%
+% 
 % erik.emeric@gmail.com
 if size(spike,2) > 1
     % spike times and events in miliseconds relative to the start of each
