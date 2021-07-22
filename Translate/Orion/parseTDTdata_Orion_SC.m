@@ -5,7 +5,7 @@ disp('Parsing TDT/Orion Data ...')
 %% get header info
 NeuroPhys.HeaderInformation=TDT_data.info;
 idx = regexp(TDT_data.info.blockname,'-');
-matPath = 'D:\Data\Gollum\Cooling';
+% matPath = 'D:\Data\Gollum\Cooling';
 subjName = TDT_data.info.blockname(1:idx(1)-1);
 if length(idx)>1
     projName = TDT_data.info.blockname(idx(1)+1:idx(2)-1);
@@ -101,13 +101,13 @@ for curTrl=firstTrlIdx:lastTrlIdx
         TDTCodeTimes = evt_ts_(evt_ts_ >= evt_ts_(tsIdx(curTrl)) ...
             & evt_ts_ < evt_ts_(tsIdx(curTrl+1)));
     end
-    cdNumIdx = orionEvent.trialevents(:,1) == strobevalues_(tsIdx(curTrl))-16384;
+    cdNumIdx = orionEvent.trialevents(:,1) == strobevalues_(tsIdx(curTrl));% -16384;
     if isempty(cdNumIdx)
         keyboard
 %         error('Missing Trial Event Data')
     end
-    OrnCodeNumbers=orionEvent.trialevents(cdNumIdx,3);
-    OrnCodeTimes = orionEvent.trialevents(cdNumIdx,4);
+    OrnCodeNumbers=orionEvent.trialevents(cdNumIdx,1);
+    OrnCodeTimes = orionEvent.trialevents(cdNumIdx,3);
     
     [~,IA,IB] = intersect(OrnCodeNumbers,TDTCodes);
     tdt_trl_Ts = ceil((TDTCodeTimes(IB) - TDTCodeTimes(1)).*1000); 
