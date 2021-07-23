@@ -118,7 +118,7 @@ classdef (ConstructOnLoad = false) NeuroPhysObject %< NeuroPhysExpObject
                 spikeList = fieldnames(obj.Digital.SpikeTimes);
             end
             
-            disp(spikeList)
+            % disp(spikeList)
             for curSpike =1:length(spikeList)
                 eval(['SpikeTimes = obj.Digital.SpikeTimes.',spikeList{curSpike},';'])
                 spks=[];
@@ -195,16 +195,16 @@ classdef (ConstructOnLoad = false) NeuroPhysObject %< NeuroPhysExpObject
                 if iscellstr(whichAD)
                     adList = whichAD;
                 elseif isnumeric(whichAD)
-                    allAD = fieldnames(obj.Analog);
+                    allAD = fieldnames(obj.Analog.LFP);
                     adList = allAD(whichAD);
                 end
             else
-                adList = fieldnames(obj.Analog);
+                adList = fieldnames(obj.Analog.LFP);
             end
             
             disp(adList)
             for curAD =1:length(adList)
-                eval(['adValues = obj.Analog.',adList{curAD},'.Voltage;'])
+                eval(['adValues = obj.Analog.LFP.',adList{curAD}])
                 AD=[];
                 for curTrl = 1:length(adValues)
                     temp=adValues{curTrl};

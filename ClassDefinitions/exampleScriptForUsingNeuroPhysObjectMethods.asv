@@ -44,13 +44,10 @@ figure
 plot(WaveForms{2}')
 title('Spike Waveforms')
 %% get analog data from object
-[adList,AnalogData] = objNeuroPhys.getAnalog;
+[adList,AnalogData] = objNeuroPhys.getAnalog
 close all
 figure
-plot(AnalogData{2}')
-%% get events from object
-% TODO method getEvents not working 
-%[eventValues,eventTimes] = objNeuroPhys.getEvents;
+plot(AnalogData
 %% get raster, histogram, and SDF from object
 [raster,histogram,pt,SDF] = objNeuroPhys.getSDFRaster(whichSpike,trials,event,peritime,KernelType);
 
