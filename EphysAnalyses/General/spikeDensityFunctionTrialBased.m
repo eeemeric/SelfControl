@@ -42,6 +42,7 @@ function [raster,histogram,pt,SDF]=spikeDensityFunctionTrialBased(spike,trials,e
 %   relative to the event.
 %
 % erik.emeric@gmail.com
+plotflag = false;
 raster=[];histogram=[];SDF=[];pt = [];
 temppath = pwd;
 if ~nargin
