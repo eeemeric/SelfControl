@@ -8,15 +8,16 @@ You can do this 2 different ways from the matlab command line
 
 For more information about working with matlab objects, see https://www.mathworks.com/company/newsletters/articles/introduction-to-object-oriented-programming-in-matlab.html
 ---
+
 NeuroPhysObject, an object that contains all the neurophysiology data aquired using the TDT or Plexon system.
 
-## NeuroPhysObject includes the following properties and methods. 
-### Properties for class NeuroPhysObject:
+### NeuroPhysObject includes the following properties and methods. 
+#### Properties for class NeuroPhysObject:
 - HeaderInformation
 - Digital, spikes and events
 - Analog, LFPs
 
-### Methods for class NeuroPhysObject:
+#### Methods for class NeuroPhysObject:
 - NeuroPhysObject, constructor. returns an object of class NeuroPhysObject
 - getSpikes, returns list of spike names (nSpikes x 1, cell vector) and the spike timestamps relative to trial start (nSpik         
 - getAnalog, returns list of LFP names and data
