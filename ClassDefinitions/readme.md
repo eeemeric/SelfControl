@@ -9,7 +9,7 @@ You can do this 2 different ways from the matlab command line
 For more information about working with matlab objects, see https://www.mathworks.com/company/newsletters/articles/introduction-to-object-oriented-programming-in-matlab.html
 ---
 
-NeuroPhysObject, an object that contains all the neurophysiology data aquired using the TDT or Plexon system.
+## NeuroPhysObject, an object that contains all the neurophysiology data aquired using the TDT or Plexon system.
 
 ### NeuroPhysObject includes the following properties and methods. 
 #### Properties for class NeuroPhysObject:
