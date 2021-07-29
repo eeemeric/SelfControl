@@ -9,7 +9,7 @@ NeuroPhysObject, an object that contains all the neurophysiology data aquired us
 
 ## Methods for class NeuroPhysObject:
 - NeuroPhysObject, constructor. returns an object of class NeuroPhysObject
-- getSpikes, returns list of spike names and the spike timestamps         
+- getSpikes, returns list of spike names (nSpikes x 1, cell vector) and the spike timestamps relative to trial start (nSpik         
 - getAnalog, returns list of LFP names and data
 - getWFs, returns list of spike names and the spike waveforms           
 - getEvents, returns all of the behavioral events and timestamps        
