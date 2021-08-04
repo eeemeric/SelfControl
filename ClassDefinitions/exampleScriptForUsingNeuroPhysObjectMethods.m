@@ -29,7 +29,7 @@ load('D:\SelfControl\data\dotMat\Aragorn-1.mat')
 trials = nonzeros(DerivedData.NoTemptationTrials(:)); % trials of interest  
 event = DerivedData.fix_cue_on; % alignment event
 peritime = [-1000 5000]; % time of alignment
-KernelType = 1; % the filter used convolve the histogram
+KernelType =1; % the filter used convolve the histogram
 whichSpike=2; % index of the spike data used
 
 %% get list of spike names and spike timestamps
